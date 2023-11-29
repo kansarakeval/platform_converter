@@ -8,5 +8,5 @@ Map<String, WidgetBuilder> ios_screen_routes = {
   // '/':(context) => HomeIosScreen(),
   // 'chats':(context) => ChatsIosScreen(),
   // 'call':(context) => CallIosScreen(),
-  '/':(context) => DashIosScreen(),
+  '/':(context) => const DashIosScreen(),
 };

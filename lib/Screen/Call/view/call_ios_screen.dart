@@ -11,7 +11,7 @@ class CallIosScreen extends StatefulWidget {
 class _CallIosScreenState extends State<CallIosScreen> {
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    return const CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text(
           "Platform Converter ",

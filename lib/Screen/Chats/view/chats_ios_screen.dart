@@ -11,7 +11,7 @@ class ChatsIosScreen extends StatefulWidget {
 class _ChatsIosScreenState extends State<ChatsIosScreen> {
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    return const CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text(
           "Platform Converter ",
