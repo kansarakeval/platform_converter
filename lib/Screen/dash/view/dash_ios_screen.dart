@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:platform_converter/Screen/Call/view/call_ios_screen.dart';
 import 'package:platform_converter/Screen/Chats/view/chats_ios_screen.dart';
 import 'package:platform_converter/Screen/Home/view/home_ios_screen.dart';
+import 'package:platform_converter/Screen/Setting/view/setting_ios_screen.dart';
 import 'package:platform_converter/Screen/dash/provider/dash_ios_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -20,6 +21,7 @@ class _DashIosScreenState extends State<DashIosScreen> {
     const HomeIosScreen(),
     const ChatsIosScreen(),
     const CallIosScreen(),
+    const SettingIosScreen(),
   ];
 
   @override
@@ -43,6 +45,10 @@ class _DashIosScreenState extends State<DashIosScreen> {
             ),
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.phone),
+              label: 'Contact',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.settings),
               label: 'Contact',
             ),
           ],
