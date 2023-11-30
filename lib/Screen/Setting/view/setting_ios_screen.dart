@@ -12,16 +12,16 @@ class SettingIosScreen extends StatefulWidget {
   State<SettingIosScreen> createState() => _SettingIosScreenState();
 }
 
-SettingProvider? providerR;
-SettingProvider? providerW;
+SettingProvider? providerr;
+SettingProvider? providerw;
 
 class _SettingIosScreenState extends State<SettingIosScreen> {
   @override
   Widget build(BuildContext context) {
-    providerR = context.read<SettingProvider>();
-    providerW = context.watch<SettingProvider>();
+    providerr = context.read<SettingProvider>();
+    providerw = context.watch<SettingProvider>();
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         middle: Text(
           "Platform Converter ",
           style: TextStyle(
@@ -30,7 +30,7 @@ class _SettingIosScreenState extends State<SettingIosScreen> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,9 +38,9 @@ class _SettingIosScreenState extends State<SettingIosScreen> {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(CupertinoIcons.person),
-                SizedBox(width: 10),
-                Column(
+                const Icon(CupertinoIcons.person),
+                const SizedBox(width: 10),
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -58,19 +58,19 @@ class _SettingIosScreenState extends State<SettingIosScreen> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 CupertinoSwitch(
-                  value: providerR!.isVisible,
+                  value: providerr!.isVisible,
                   onChanged: (value) {
-                    providerR!.showDialog(value);
+                    providerr!.showDialog(value);
                   },
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            (providerR!.isVisible == true)
+            (providerr!.isVisible == true)
                 ? Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -82,16 +82,16 @@ class _SettingIosScreenState extends State<SettingIosScreen> {
                             color: CupertinoColors.activeBlue,
                             borderRadius: BorderRadius.circular(100),
                           ),
-                          child: Icon(CupertinoIcons.camera),
+                          child: const Icon(CupertinoIcons.camera),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        CupertinoTextField.borderless(
+                        const CupertinoTextField.borderless(
                           textAlign: TextAlign.center,
                           placeholder: "Enter your name..",
                         ),
-                        CupertinoTextField.borderless(
+                        const CupertinoTextField.borderless(
                           textAlign: TextAlign.center,
                           placeholder: "Enter your bio..",
                         ),
@@ -99,14 +99,14 @@ class _SettingIosScreenState extends State<SettingIosScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             CupertinoButton(
-                                child: Text(
+                                child: const Text(
                                   "SAVE",
                                   style: TextStyle(
                                       color: CupertinoColors.activeBlue),
                                 ),
                                 onPressed: () {}),
                             CupertinoButton(
-                                child: Text(
+                                child: const Text(
                                   "CLEAR",
                                   style: TextStyle(
                                       color: CupertinoColors.activeBlue),
@@ -123,9 +123,9 @@ class _SettingIosScreenState extends State<SettingIosScreen> {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(CupertinoIcons.sun_max),
-                SizedBox(width: 10),
-                Column(
+                const Icon(CupertinoIcons.sun_max),
+                const SizedBox(width: 10),
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -143,7 +143,7 @@ class _SettingIosScreenState extends State<SettingIosScreen> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Consumer<ThemeProvider>(
                   builder: (context, value, child) => CupertinoSwitch(
                     value: value.isLight,
