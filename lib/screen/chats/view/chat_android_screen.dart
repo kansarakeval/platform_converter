@@ -43,6 +43,7 @@ class _ChatAndroidScreenState extends State<ChatAndroidScreen> {
                                 name: providerr!.addDataList[index].name,
                                 call: providerr!.addDataList[index].call,
                                 image: providerr!.addDataList[index].image);
+                            providerr!.storeIndex(index);
                             showWidget(context, ec);
                           },
                           child: CircleAvatar(
@@ -60,6 +61,7 @@ class _ChatAndroidScreenState extends State<ChatAndroidScreen> {
                                 name: providerr!.addDataList[index].name,
                                 call: providerr!.addDataList[index].call,
                                 image: providerr!.addDataList[index].image);
+                            providerr!.storeIndex(index);
                             showWidget(context, ec);
                           },
                           child: Container(

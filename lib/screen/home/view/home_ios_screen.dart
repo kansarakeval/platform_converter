@@ -68,6 +68,7 @@ class _HomeIosScreenState extends State<HomeIosScreen> {
                 height: 20,
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisSize: MainAxisSize.min,
@@ -127,109 +128,106 @@ class _HomeIosScreenState extends State<HomeIosScreen> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        GestureDetector(
-                            onTap: () {
-                              showCupertinoModalPopup(
-                                context: context,
-                                builder: (context) =>
-                                    SizedBox(
-                                      height: 200,
-                                      child: CupertinoDatePicker(
-                                        initialDateTime: providerr!.date,
-                                        backgroundColor: Colors.white,
-                                        onDateTimeChanged: (value) {
-                                          providerr!.changeDate(value);
-                                        },
-                                      ),
-                                    ),
-                              );
-                            },
-                            child: const Icon(CupertinoIcons.calendar)),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Date : ${providerw!.date!.day}/${providerw!.date!
-                              .month}/${providerw!.date!.year}",
-                          style: const TextStyle(
-                            fontSize: 15,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        GestureDetector(
-                            onTap: () {
-                              showCupertinoModalPopup(
-                                context: context,
-                                builder: (context) {
-                                  return SizedBox(
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      GestureDetector(
+                          onTap: () {
+                            showCupertinoModalPopup(
+                              context: context,
+                              builder: (context) =>
+                                  SizedBox(
                                     height: 200,
-                                    child: CupertinoTimerPicker(
-                                      mode: CupertinoTimerPickerMode.hm,
-                                      backgroundColor: CupertinoColors.white,
-                                      onTimerDurationChanged: (value) {
-                                        List<String>l1 = value.toString().split(
-                                            ':');
-                                        TimeOfDay? t1 = TimeOfDay(
-                                            hour: int.parse(l1[0]),
-                                            minute: int.parse(l1[1]));
-                                        providerr!.changeTime(t1);
+                                    child: CupertinoDatePicker(
+                                      initialDateTime: providerr!.date,
+                                      backgroundColor: Colors.white,
+                                      onDateTimeChanged: (value) {
+                                        providerr!.changeDate(value);
                                       },
-                                      initialTimerDuration: Duration(
-                                          hours: providerr!.time!.hour,
-                                          minutes: providerr!.time!.minute),
                                     ),
-                                  );
-                                },
-                              );
-                            },
-                            child: const Icon(CupertinoIcons.time)),
-                        const SizedBox(
-                          width: 10,
+                                  ),
+                            );
+                          },
+                          child: const Icon(CupertinoIcons.calendar)),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Date : ${providerw!.date!.day}/${providerw!.date!
+                            .month}/${providerw!.date!.year}",
+                        style: const TextStyle(
+                          fontSize: 15,
                         ),
-                        Text(
-                          "Time : ${providerr!.time!.hour}:${providerr!.time!
-                              .minute}",
-                          style: const TextStyle(
-                            fontSize: 15,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  CupertinoButton.filled(
-                    child: const Text("Save"),
-                    onPressed: () {
-                      HomeModal cm = HomeModal(
-                        name: txtName.text,
-                        call: txtCall.text,
-                        chat: txtChat.text,
-                        time: txttime.text,
-                        date: txtdate.text,
-                        image: providerw!.path,
-                      );
-                      providerr!.updateImagePath(null);
-                      providerr!.addPlatfomeData(cm);
-                      providerw!.dashIndex;
-                    },
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      GestureDetector(
+                          onTap: () {
+                            showCupertinoModalPopup(
+                              context: context,
+                              builder: (context) {
+                                return SizedBox(
+                                  height: 200,
+                                  child: CupertinoTimerPicker(
+                                    mode: CupertinoTimerPickerMode.hm,
+                                    backgroundColor: CupertinoColors.white,
+                                    onTimerDurationChanged: (value) {
+                                      List<String>l1 = value.toString().split(
+                                          ':');
+                                      TimeOfDay? t1 = TimeOfDay(
+                                          hour: int.parse(l1[0]),
+                                          minute: int.parse(l1[1]));
+                                      providerr!.changeTime(t1);
+                                    },
+                                    initialTimerDuration: Duration(
+                                        hours: providerr!.time!.hour,
+                                        minutes: providerr!.time!.minute),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                          child: const Icon(CupertinoIcons.time)),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Time : ${providerr!.time!.hour}:${providerr!.time!
+                            .minute}",
+                        style: const TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: CupertinoButton.filled(
+                      child: const Text("Save"),
+                      onPressed: () {
+                        HomeModal cm = HomeModal(
+                          name: txtName.text,
+                          call: txtCall.text,
+                          chat: txtChat.text,
+                          time: txttime.text,
+                          date: txtdate.text,
+                          image: providerw!.path,
+                        );
+                        providerr!.updateImagePath(null);
+                        providerr!.addPlatfomeData(cm);
+                        providerw!.dashIndex;
+                      },
+                    ),
                   ),
                 ],
               ),

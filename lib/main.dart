@@ -27,7 +27,7 @@ void main() {
           create: (context) => ThemeProvider(),
         ),
       ],
-      child: Platform.isIOS
+      child: Platform.isAndroid
           ? Consumer<ThemeProvider>(
               builder: (context, value, child) {
                 return MaterialApp(

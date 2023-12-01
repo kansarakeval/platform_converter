@@ -54,7 +54,11 @@ class HomeProvider with ChangeNotifier{
   }
 
   void editContact(HomeModal ec) {
-    addDataList[infoIndex!] = ec;
+    addDataList[infoIndex] = ec;
+    notifyListeners();
+  }
+  void contactDelete() {
+    addDataList.removeAt(infoIndex);
     notifyListeners();
   }
 }

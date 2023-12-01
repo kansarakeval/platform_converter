@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 void showWidget(BuildContext context, HomeModal ec) {
   TextEditingController txtName = TextEditingController(text: ec.name);
   TextEditingController txtChat = TextEditingController(text: ec.chat);
+  TextEditingController txtCall = TextEditingController(text: ec.call);
 
   showDialog(
     context: context,
@@ -83,16 +84,33 @@ void showWidget(BuildContext context, HomeModal ec) {
             const SizedBox(
               height: 10,
             ),
+            TextField(
+              controller: txtCall,
+              keyboardType: TextInputType.phone,
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(), label: Text("Call")),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             ElevatedButton(
               onPressed: () {
                 HomeModal ec = HomeModal();
                 ec.name = txtName.text;
                 ec.chat = txtChat.text;
+                ec.call = txtCall.text;
                 ec.image = context.read<HomeProvider>().path;
                 context.read<HomeProvider>().editContact(ec);
                 Navigator.pop(context);
               },
               child: const Text("Update"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // context.read<HomeProvider>().contactDelete();
+                Navigator.pop(context);
+              },
+              child: const Text("Delete"),
             )
           ],
         ),

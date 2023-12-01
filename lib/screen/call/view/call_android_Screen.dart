@@ -39,7 +39,7 @@ class _CallAndroidScreenState extends State<CallAndroidScreen> {
                           radius: 25,
                           backgroundImage: FileImage(File(
                             "${providerw!.addDataList[index].image}",
-                          )),
+                          ),),
                         )
                       : Container(
                           height: MediaQuery.of(context).size.height * 0.18,
