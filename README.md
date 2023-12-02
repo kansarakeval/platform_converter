@@ -23,19 +23,11 @@ samples, guidance on mobile development, and a full API reference.
 <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/41c4b664-7789-4e4d-a75d-888577e27507" hight="500" width="150">
 <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/fb7fb541-14ad-4764-b68e-dc0f5970d48a" hight="500" width="150">
 <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/3f599d36-d8b9-4fc7-b564-42c19f8a24b0" hight="500" width="150">
-  
-  
-  
- 
-  
-  
-  
-  <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/f01055f2-7895-496f-9111-9ed90a18fbff" hight="500" width="150">
-  <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/46b67ecd-c277-4fc1-83ba-48c239d17f7f" hight="500" width="150">
-  <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/a9b37083-18c3-46a4-a5e9-94b32b61fe56" hight="500" width="150">
-  <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/1223f551-e349-4ad8-aaaf-505a2a0daefa" hight="500" width="150">
-  <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/51e1b86b-69a5-4636-bebe-2b4227c81387" hight="500" width="150">
-  <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/6a6182ff-2b34-43fe-a69a-d4d688b04955" hight="500" width="150">
-  <img src="https://github.com/kansarakeval/platform_converter/assets/119046853/121be8cc-d2a2-44e2-8940-c5789a1238d1" hight="500" width="150">
-  
+<img src="https://github.com/kansarakeval/platform_converter/assets/119046853/121be8cc-d2a2-44e2-8940-c5789a1238d1" hight="500" width="150"> 
+<img src="https://github.com/kansarakeval/platform_converter/assets/119046853/6a6182ff-2b34-43fe-a69a-d4d688b04955" hight="500" width="150">  
+<img src="https://github.com/kansarakeval/platform_converter/assets/119046853/51e1b86b-69a5-4636-bebe-2b4227c81387" hight="500" width="150">  
+<img src="https://github.com/kansarakeval/platform_converter/assets/119046853/1223f551-e349-4ad8-aaaf-505a2a0daefa" hight="500" width="150">
+<img src="https://github.com/kansarakeval/platform_converter/assets/119046853/a9b37083-18c3-46a4-a5e9-94b32b61fe56" hight="500" width="150">
+<img src="https://github.com/kansarakeval/platform_converter/assets/119046853/46b67ecd-c277-4fc1-83ba-48c239d17f7f" hight="500" width="150">     
+<img src="https://github.com/kansarakeval/platform_converter/assets/119046853/f01055f2-7895-496f-9111-9ed90a18fbff" hight="500" width="150">   
 </p>
