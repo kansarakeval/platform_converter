@@ -107,7 +107,7 @@ void showWidget(BuildContext context, HomeModal ec) {
             ),
             ElevatedButton(
               onPressed: () {
-                // context.read<HomeProvider>().contactDelete();
+                context.read<HomeProvider>().contactDelete();
                 Navigator.pop(context);
               },
               child: const Text("Delete"),

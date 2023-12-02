@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:platform_converter/Screen/Call/view/call_ios_screen.dart';
@@ -14,6 +16,7 @@ class HomeProvider with ChangeNotifier{
   int dashIndex= 0;
   int infoIndex = 0;
   bool isLock =false;
+  bool isIos =true;
 
   void changeDate(DateTime? d1){
     date = d1;

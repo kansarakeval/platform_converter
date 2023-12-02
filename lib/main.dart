@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:platform_converter/Screen/Home/provider/home_provider.dart';
@@ -27,27 +25,24 @@ void main() {
           create: (context) => ThemeProvider(),
         ),
       ],
-      child: Platform.isAndroid
-          ? Consumer<ThemeProvider>(
-              builder: (context, value, child) {
-                return MaterialApp(
-                  theme: value.isLight ? lightTheme : darkTheme,
-                  debugShowCheckedModeBanner: false,
-                  routes: Android_screen_routes,
-                );
-              },
-            )
-          : Consumer<ThemeProvider>(
-              builder: (context, value, child) {
-                value.changeThem();
-                return CupertinoApp(
+      child: Consumer<ThemeProvider>(
+        builder: (context, value, child) {
+          value.changeThem();
+          return context
+              .read<ThemeProvider>()
+              .isUi ?
+          MaterialApp(
+            theme: value.isLight ? lightTheme : darkTheme,
+            debugShowCheckedModeBanner: false,
+            routes: Android_screen_routes,
+          ):CupertinoApp(
                   theme:
                       value.isLight ? lightCupertinoTheme : darkCupertinoTheme,
                   debugShowCheckedModeBanner: false,
                   routes: ios_screen_routes,
                 );
-              },
-            ),
+        },
+      ),
     ),
   );
 }

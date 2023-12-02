@@ -36,7 +36,7 @@ class _ChatsIosScreenState extends State<ChatsIosScreen> {
           return Padding(
             padding: const EdgeInsets.all(10),
             child: GestureDetector(
-              onTap: (){
+              onTap: () async {
                 HomeModal c1 = HomeModal(
                     name: providerr!.addDataList[index].name,
                     call: providerr!.addDataList[index].call,

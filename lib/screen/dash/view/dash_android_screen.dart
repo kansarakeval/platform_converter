@@ -4,6 +4,7 @@ import 'package:platform_converter/Screen/Chats/view/chat_android_screen.dart';
 import 'package:platform_converter/Screen/Home/view/home_android_screen.dart';
 import 'package:platform_converter/Screen/Setting/view/setting_android_screen.dart';
 import 'package:platform_converter/Screen/dash/provider/dash_ios_provider.dart';
+import 'package:platform_converter/util/Theme/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class DashAndroidScreen extends StatefulWidget {
@@ -18,10 +19,10 @@ class _DashAndroidScreenState extends State<DashAndroidScreen> {
   DashIosProvider? providerw;
 
   List<Widget> screen = [
-     HomeAndroidScreen(),
-     ChatAndroidScreen(),
-     CallAndroidScreen(),
-     SettingAndriodScreen(),
+    HomeAndroidScreen(),
+    ChatAndroidScreen(),
+    CallAndroidScreen(),
+    SettingAndriodScreen(),
   ];
 
   @override
@@ -32,7 +33,19 @@ class _DashAndroidScreenState extends State<DashAndroidScreen> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Plateform Converter"),
+          title: Text("Plateform Converter",style: TextStyle(fontSize: 20),),
+          actions: [
+            Consumer(
+              builder: (context, value, child) {
+                return Switch(value: context
+                    .read<ThemeProvider>()
+                    .isUi ,onChanged: (value){
+                  context.read<ThemeProvider>().changeApp(value);
+                }
+                );
+              },
+            ),
+          ],
           bottom: const TabBar(
             tabs: [
               Tab(

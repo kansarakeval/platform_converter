@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:platform_converter/Screen/Home/modal/Home_modal.dart';
 import 'package:platform_converter/Screen/Home/provider/home_provider.dart';
+import 'package:platform_converter/util/Theme/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class HomeIosScreen extends StatefulWidget {
@@ -22,19 +23,25 @@ class _HomeIosScreenState extends State<HomeIosScreen> {
   TextEditingController txtdate = TextEditingController();
   TextEditingController txttime = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
     providerr = context.read<HomeProvider>();
     providerw = context.watch<HomeProvider>();
     return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
+      navigationBar:  CupertinoNavigationBar(
         middle: Text(
           "Platform Converter ",
           style: TextStyle(
             fontSize: 20,
           ),
         ),
+        trailing: CupertinoSwitch(
+          value: context.read<ThemeProvider>().isUi,
+          onChanged: (value) {
+            context.read<ThemeProvider>().changeApp(value);
+          },
+        ),
+
       ),
       child: Padding(
         padding: const EdgeInsets.all(10),
